@@ -27,7 +27,7 @@ def Tworzenie_Wykresow(df, csv_file_path, output_folder):
         ax.set_xlabel('t [ms]')
         ax.set_ylabel('u [mV]')
         ax.set_title(f'{column_name}(t)')
-        ax.grid(True, linestyle='--')
+        ax.grid(True, linestyle=':')
         ax.legend(loc='upper right')
 
         filename = os.path.join(output_folder, f"{column_name}(t).png")
@@ -44,7 +44,7 @@ def Tworzenie_Wykresow(df, csv_file_path, output_folder):
     axs.set_xlabel('t [ms]')
     axs.set_ylabel('u [mV]')
     axs.set_title('Wszystkie kanały')
-    axs.grid(True, linestyle='--')
+    axs.grid(True, linestyle=':')
     axs.legend(df.columns[1:],loc='upper right')
     filename = os.path.join(output_folder, "Wszystkie kanały.png")
     plt.savefig(filename)
