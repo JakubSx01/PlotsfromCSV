@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
-import openpyxl
 
 def Tworzenie_Wykresow(df, csv_file_path, output_folder):
     csv_directory = os.path.dirname(csv_file_path)
